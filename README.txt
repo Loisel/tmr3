@@ -63,8 +63,8 @@ Let us first explain some simple use cases:
   thesis and then study the file cfg.py. 
   The important objects are generated there and if you understand
   them, the rest is quite simple.
-  Then study geval.f95. It is written in Fortran and the actual rate calculation, 
-  which is the most expensive part, is done there.
+  Then study geval.f95. It is written in Fortran and the actual rate 
+  calculation, which is the most expensive part, is done there.
 
 
 Structure:
