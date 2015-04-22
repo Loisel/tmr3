@@ -4,6 +4,9 @@ tmr3 Readme
 
 tmr3 is the third version of a tool to calculate the conductance and the
 TMR of CNT quantum dot contacted to ferromagnetic leads at (almost) zero bias.
+The program was used to perform the numerical calculations for this paper:
+
+[1] http://arxiv.org/abs/1502.02005  
 
 Its structure arises, like most physic simulations, from needs of everyday
 parameter scans and its "history", so many things might not be structured 
@@ -34,28 +37,32 @@ Usage
 
 Let us first explain some simple use cases:
 
-+ To reproduce the main result of the paper, i.e., Fig. 11, execute the following line
++ To reproduce the main result of the paper, i.e., Fig. 11 in [1], 
+  execute the following line
   (given that you have 4 cores available, see numberofcores in lookup.py):
 
   python lookup.py
 
   All parameters should be set accordingly in the current version.
 
-+ If you want to change some parameters, open lookup.py and search for the definition
-  of pdict. Here, you can specify parameter ranges for different parameters.
-  Executing lookup.py then generates all possible combinations of these parameters
-  and starts to calculate it one by one using 4 cores (number can be specified
-  just below pdict).
++ If you want to change some parameters, open lookup.py and search for the 
+  definition of pdict. Here, you can specify parameter ranges for 
+  different parameters.
+  Executing lookup.py then generates all possible combinations of
+  these parameters and starts to calculate it one by one using 4 cores 
+  (number can be specified just below pdict).
   The current state of the calcaltion is saved in table.dat (contains the list of
   parameter permutations) and lnum.dat (contains the linenumber of the current
   parameterset in table.dat).
 
-  IMPORTANT: If you start a new calculation, always remove lnum.dat and table.dat,
-             otherwise the program tries to continue with the previous calculations.
+  IMPORTANT: If you start a new calculation, always remove lnum.dat
+             and table.dat, otherwise the program tries to continue with 
+             the previous calculations.
 
-+ If you want to understand the program, read the paper and/or the thesis and then
-  study the file cfg.py. The important objects are generated there and if you
-  understand them, the rest is quite simple.
++ If you want to understand the program, read the paper and/or the
+  thesis and then study the file cfg.py. 
+  The important objects are generated there and if you understand
+  them, the rest is quite simple.
   Then study geval.f95. It is written in Fortran and the actual rate calculation, 
   which is the most expensive part, is done there.
 
