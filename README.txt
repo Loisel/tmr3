@@ -51,9 +51,9 @@ Let us first explain some simple use cases:
   Executing lookup.py then generates all possible combinations of
   these parameters and starts to calculate it one by one using 4 cores 
   (number can be specified just below pdict).
-  The current state of the calcaltion is saved in table.dat (contains the list of
-  parameter permutations) and lnum.dat (contains the linenumber of the current
-  parameterset in table.dat).
+  The current state of the calcaltion is saved in table.dat 
+  (contains the list of parameter permutations) and 
+  lnum.dat (contains the linenumber of the current parameterset in table.dat).
 
   IMPORTANT: If you start a new calculation, always remove lnum.dat
              and table.dat, otherwise the program tries to continue with 
